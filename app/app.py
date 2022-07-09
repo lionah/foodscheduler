@@ -5,12 +5,11 @@ app = Flask(__name__)
 
 
 def main():
+    import routes
+
+    routes.init_routes(app)
+
     app.run()
-
-
-@app.route('/')
-def root():
-    return "Hello World"
 
 
 if __name__ == '__main__':
