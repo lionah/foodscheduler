@@ -7,7 +7,8 @@ import routes
 def main():
 	app = Flask(__name__)
 
-	models.init_db(app)
+	with app.app_context():
+		models.init_db(app)
 
 	routes.init_routes(app)
 
