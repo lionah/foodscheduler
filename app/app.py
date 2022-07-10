@@ -1,11 +1,14 @@
 from flask import Flask
 
+import models
+import routes
+
 
 app = Flask(__name__)
 
 
 def main():
-    import routes
+    models.init_db(app)
 
     routes.init_routes(app)
 
