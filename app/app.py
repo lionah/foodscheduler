@@ -5,14 +5,14 @@ import routes
 
 
 def main():
-    app = Flask(__name__)
+	app = Flask(__name__)
 
-    models.init_db(app)
+	models.init_db(app)
 
-    routes.init_routes(app)
+	routes.init_routes(app)
 
-    app.run()
+	app.run()
 
 
 if __name__ == '__main__':
-    main()
+	main()
