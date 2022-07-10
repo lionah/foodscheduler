@@ -4,10 +4,9 @@ import models
 import routes
 
 
-app = Flask(__name__)
-
-
 def main():
+    app = Flask(__name__)
+
     models.init_db(app)
 
     routes.init_routes(app)
